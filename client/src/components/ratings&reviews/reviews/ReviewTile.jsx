@@ -29,38 +29,39 @@ const ReviewTile = ({ review, handleReport }) => {
       console.log('clicked helpful', review.review_id);
       e.preventDefault();
       SetClickCount(clickCount + 1);
-      SetHelpfulCount(helpfulCount + 1);
-      // if (clickCount < 1) {
-      //    console.log('clicked helpful', clickCount)
-      //    axios({
-      //       url: '/reviews/helpful',
-      //       method: 'post',
-      //       data: {
-      //          review_id: review.review_id
-      //       }
-      //    }).then((response) => {
-      //       SetHelpfulCount(helpfulCount + 1)
-      //    })
-      // }
+      console.log(`helpful clicked ${clickCount} times!! `)
+      if (clickCount < 1) {
+         axios({
+            url: '/reviews/helpful',
+            method: 'post',
+            data: {
+               review_id: review.review_id
+            }
+         }).then((response) => {
+            SetHelpfulCount(helpfulCount + 1)
+         })
+      }
    };
    const handleReporClicked = (e) => {
       console.log('report clicked');
       e.preventDefault();
       handleReport(review.review_id);
    };
-   useEffect(() => {
-      if (clickCount <= 1) {
-         axios({
-            url: '/reviews/helpful',
-            method: 'post',
-            data: {
-               review_id: review.review_id,
-            },
-         }).then((response) => {
-            console.log(`Successfully set ${review.review_id} as helpful`);
-         });
-      }
-   }, [helpfulCount]);
+   // useEffect(() => {
+   //    console.log(`helpful clicked ${clickCount} times! `)
+   //    console.log(`helpful count now ${helpfulCount}`)
+   //    if (clickCount = 1) {
+   //       axios({
+   //          url: '/reviews/helpful',
+   //          method: 'post',
+   //          data: {
+   //             review_id: review.review_id,
+   //          },
+   //       }).then((response) => {
+   //          console.log(`Successfully set ${review.review_id} as helpful`);
+   //       });
+   //    }
+   // });
    return (
       <div className='reviewTile'>
          <StarRating rating={review.rating} reviewId={review.review_id} />

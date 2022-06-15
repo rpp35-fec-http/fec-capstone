@@ -96,6 +96,7 @@ const RatingsAndReviews = ({ currentProductId }) => {
             productName={productName}
             postReview={postReview}
             handleReport={handleReport}
+            currentProductId={currentProductId}
          />
       </div>
    );
