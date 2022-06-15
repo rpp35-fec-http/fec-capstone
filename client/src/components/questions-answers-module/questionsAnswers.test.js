@@ -195,7 +195,7 @@ let questionList = {
 
 // set up sever for unit testing
 const server = setupServer(
-  rest.get('/questionsAnswers/question/:question_id', (req, res, ctx) => {
+  rest.get('/questionsAnswers/questions/:question_id', (req, res, ctx) => {
    return res(ctx.json(questionList));
   }),
   rest.get('/questionsAnswers/productInfo/:product_id', (req, res, ctx) => {
@@ -209,7 +209,10 @@ afterAll(() => server.close());
 
 
 describe('QuestionsAnswers', () => {
-   test('renders questions & answers components', () => {
-      render(<QuestionsAnswers />);
+   test('dummy test', () => {});
+
+   test('renders questions & answers component', async () => {
+      render(<QuestionsAnswers currentProductId={productID}/>);
    });
 });
+
