@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 
 const Characteristics = ({ characteristics }) => {
   const getTriangleIcon = (key) => {
-    if(characteristics[key].value){
+    if(characteristics[key] && characteristics[key].value){
       let percentage = Math.round(((Number(characteristics[key].value) - 1) / 4 ) * 100);
     return (
       <span className='triangelicon' style={{ 'left': `${percentage}%`}}>&#9660;</span>
