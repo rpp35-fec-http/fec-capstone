@@ -22,6 +22,7 @@ Includes common retail shopping features such as search, browse, add to cart, cr
 ![](diagrams/showMoreReview.gif)
 ![](diagrams/reviewSearch.gif)
 ![](diagrams/addNewReview.gif)
+
 ## Tech Stack
 
 This project was built with the following technologies:
@@ -62,7 +63,7 @@ NODE_ENV="development" || "production"
 npm run dev
 ```
 
-This opens a development server in your local browser at port 8080.
+This opens a development server in your local browser at port 3000.
 
 -  When application is ready for production, have webpack build your bundle and minimize your files:
 
@@ -70,7 +71,7 @@ This opens a development server in your local browser at port 8080.
 npm start
 ```
 
-Then navigate to port 1128 in your browser to view your application.
+Then navigate to port 8080 in your browser to view your application.
 
 If you are seeing errors with your node.js server, try killing all nodemon servers:
 
@@ -81,13 +82,7 @@ pkill -f nodemon
 -Run unit tests with Jest/React Testing Library:
 
 ```bash
-npm start
-```
-
--Run unit tests with Jest/React Testing Library:
-
-```bash
-npm start
+npm test
 ```
 
 -Then run end to end tests with Cypress:
@@ -96,8 +91,15 @@ npm start
 npm run cypress
 ```
 
+## Collaborators
+
+-  [Cristian Ordonez](https://github.com/cristianordonez)
+-  [Tyler Nourse](https://github.com/Nourse41)
+-  [Shengnan Huang](https://github.com/maomaotuo)
+
 ## Resources
 
+-  [Original group repository](https://github.com/rpp35-fec-http/fec-capstone)
 -  [React code-splitting](https://reactjs.org/docs/code-splitting.html)
 -  [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)
 -  [Material UI](https://mui.com/)
