@@ -41,7 +41,7 @@ const RatingsAndReviews = ({ currentProductId }) => {
                   url: `${__API__}/reviews/meta`,
                   headers: { product_id: currentProductId },
                }),
-               axios.get(`/products/${currentProductId}`),
+               axios.get(`${__API__}/products/${currentProductId}`),
             ])
             .then(
                axios.spread((reviews, reviewsMeta, productData) => {
@@ -99,6 +99,7 @@ const RatingsAndReviews = ({ currentProductId }) => {
             productName={productName}
             postReview={postReview}
             handleReport={handleReport}
+            currentProductId={currentProductId}
          />
       </div>
    );

@@ -11,6 +11,7 @@ const ReviewsList = ({
    productName,
    postReview,
    handleReport,
+   currentProductId
 }) => {
    console.log('In ReviewsList got: ', reviews);
    console.log('starFilters in ReviewsList.jsx: ', starFilters);
@@ -142,6 +143,7 @@ const ReviewsList = ({
             value={value}
             SetValue={SetValue}
             postReview={postReview}
+            currentProductId={currentProductId}
          >
             <h3>Write Your Review</h3>
             <h4>About the {productName}</h4>
