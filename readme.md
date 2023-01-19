@@ -17,6 +17,8 @@ Includes common retail shopping features such as search, browse, add to cart, cr
 ![](diagrams/home-page.gif)
 ![](diagrams/product-overview.gif)
 ![](diagrams/related-items.gif)
+### Q&A Component
+Frontend Q&A module with the ability to filter, expand/collapse, mark helpful or report questions and answers. Users can add questions or answers with photos from local storage through conditionally rendered modals. 
 ![](diagrams/Q&A_main.gif)
 ![](diagrams/Q&A_modal.gif)
 ![](diagrams/showMoreReview.gif)
